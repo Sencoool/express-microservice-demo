@@ -1,0 +1,25 @@
+{
+  "name": "express-microservice-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:all": "concurrently \"nodemon index.js\" \"nodemon user-service/index.js\" \"nodemon product-service/index.js\"",
+    "start:main": "nodemon index.js",
+    "start:user": "nodemon user-service/index.js",
+    "start:product": "nodemon product-service/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10"
+  }
+}
