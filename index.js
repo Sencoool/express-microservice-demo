@@ -17,18 +17,21 @@ app.get("/", (req, res) => {
 });
 
 // route to user service
-app.get("/user", async (req, res) => {
+app.get("/users", async (req, res) => {
   const response = await axios.get("http://localhost:3001/");
   res.json(response.data);
 });
 
 // route to product service
-app.get("/product", async (req, res) => {
+app.get("/products", async (req, res) => {
   const response = await axios.get("http://localhost:3002/");
   res.json(response.data);
 });
 
 // start the main server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`, `http://localhost:${PORT}`);
+  console.log(
+    `API Gateway is running on port ${PORT}`,
+    `http://localhost:${PORT}`
+  );
 });
