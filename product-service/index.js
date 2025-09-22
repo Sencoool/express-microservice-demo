@@ -5,7 +5,13 @@ const app = express();
 const PORT = process.env.PORT || 3002;
 
 app.get("/", (req, res) => {
-  const product = { id: 1, name: "Sample Product" };
+  const product = [
+    { id: 1, name: "Shirt" },
+    { id: 2, name: "Pants" },
+    { id: 3, name: "Jacket" },
+    { id: 4, name: "Shoes" },
+    { id: 5, name: "Hat" },
+  ];
   res.json({ message: "Product List", product });
 });
 
